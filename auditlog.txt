@@ -1,0 +1,83 @@
+
+ ***********************************  S h a r e p o i n t  P u b l i s h e r *********************************** 
+
+The following lists all of the variables and their values as of 10/20/2016 13:21:31
+
+Name                           Value                                                                                              
+----                           -----                                                                                              
+action                         Copy                                                                                               
+errorlog                       C:\Users\spdev_farm_setup\Documents\WindowsPowerShell\Modules\SharepointPublisher\errorlog.txt     
+subdirectories                 $false                                                                                             
+alertType                      List                                                                                               
+documentLibraryURL             Shared Documents/Calls for Service                                                                 
+documentLibrary                Shared Documents                                                                                   
+monitordirectory               C:\Users\spdev_farm_setup\Documents\WindowsPowerShell\Modules\SharepointPublisher\Folder2Monitor   
+deliveryChannels               Email                                                                                              
+auditlog                       C:\Users\spdev_farm_setup\Documents\WindowsPowerShell\Modules\SharepointPublisher\auditlog.txt     
+enableAll                      ON                                                                                                 
+filter                         ^\d{2}-\d{4}-\d{4}.\d{2}.\d{2}-b?\d{3,5}.*\.pdf$                                                   
+title                          A new file has been added to the library/list ....                                                 
+webURL                         c3.prd.tps/bb/                                                                                     
+group                          MyGroup                                                                                            
+eventType                      Add                                                                                                
+account                        spdev_farm_setup                                                                                   
+enableAlerts                   OFF                                                                                                
+alertFrequency                 Immediate                                                                                          
+
+
+
+ ***********************************  S h a r e p o i n t  P u b l i s h e r *********************************** 
+
+The following lists all of the variables and their values as of 10/20/2016 13:29:20
+
+Name                           Value                                                                                              
+----                           -----                                                                                              
+action                         Copy                                                                                               
+errorlog                       C:\Users\spdev_farm_setup\Documents\WindowsPowerShell\Modules\SharepointPublisher\errorlog.txt     
+subdirectories                 $false                                                                                             
+alertType                      List                                                                                               
+documentLibraryURL             Shared Documents/Calls for Service                                                                 
+documentLibrary                Shared Documents                                                                                   
+monitordirectory               C:\Users\spdev_farm_setup\Documents\WindowsPowerShell\Modules\SharepointPublisher\Folder2Monitor   
+deliveryChannels               Email                                                                                              
+auditlog                       C:\Users\spdev_farm_setup\Documents\WindowsPowerShell\Modules\SharepointPublisher\auditlog.txt     
+enableAll                      ON                                                                                                 
+filter                         ^\d{2}-\d{4}-\d{4}.\d{2}.\d{2}-b?\d{3,5}.*\.pdf$                                                   
+title                          A new file has been added to the library/list ....                                                 
+webURL                         c3.prd.tps/bb/                                                                                     
+group                          MyGroup                                                                                            
+eventType                      Add                                                                                                
+account                        spdev_farm_setup                                                                                   
+enableAlerts                   OFF                                                                                                
+alertFrequency                 Immediate                                                                                          
+
+
+
+ ***********************************  S h a r e p o i n t  P u b l i s h e r *********************************** 
+
+The following lists all of the variables and their values as of 10/20/2016 13:57:05
+
+Name                           Value                                                                                              
+----                           -----                                                                                              
+action                         Copy                                                                                               
+errorlog                       C:\Users\spdev_farm_setup\Documents\WindowsPowerShell\Modules\SharepointPublisher\errorlog.txt     
+subdirectories                 $false                                                                                             
+alertType                      List                                                                                               
+documentLibraryURL             Documents/TPS Rocks                                                                                
+documentLibrary                Documents                                                                                          
+monitordirectory               C:\Users\spdev_farm_setup\Documents\WindowsPowerShell\Modules\SharepointPublisher\Folder2Monitor   
+deliveryChannels               Email                                                                                              
+auditlog                       C:\Users\spdev_farm_setup\Documents\WindowsPowerShell\Modules\SharepointPublisher\auditlog.txt     
+enableAll                      ON                                                                                                 
+filter                         ^\d{2}-\d{4}-\d{4}.\d{2}.\d{2}-b?\d{3,5}.*\.pdf$                                                   
+title                          A new file has been added to the library/list ....                                                 
+webURL                         http://mydev.dev.tps/personal/ront/                                                                
+group                          MyGroup                                                                                            
+eventType                      Add                                                                                                
+account                        spdev_farm_setup                                                                                   
+enableAlerts                   OFF                                                                                                
+alertFrequency                 Immediate                                                                                          
+
+
+File 16-1234-1234.12.12-b88116MyTestFiled - Copy.pdf belonging to BUILTIN\Administrators was COPIED by spdev_farm_setup to http://mydev.dev.tps/personal/ront//Documents/TPS%20Rocks/16-1234-1234.12.12-b88116MyTestFiled%20-%20Copy.pdf on 10/20/2016 13:57:06
+File 16-1234-1234.12.12-b88116MyTestFiled.pdf belonging to BUILTIN\Administrators was COPIED by spdev_farm_setup to http://mydev.dev.tps/personal/ront//Documents/TPS%20Rocks/16-1234-1234.12.12-b88116MyTestFiled.pdf on 10/20/2016 13:57:14

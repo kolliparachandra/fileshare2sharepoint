@@ -1,0 +1,152 @@
+﻿<?xml version="1.0"?>
+<!-- IMPORTANT If you change any of the values in the configuration below, you must run **settings.ps1 .\ConfigSettings.xml** command in order for the changes to take effect 
+A guide is provided BELOW that explains each of the settings and its permissible values
+If a setting has the phrase <<not implemented>> on the line, then changing its values will have no effect.
+Run **.\troubleshooting.ps1** to see all of the name-value pairs that have been configured-->
+<configurations>
+  <management>
+      <component key="enableAll" value="ON" />
+      <component key="account" value="spdev_farm_setup" />  <!--not implemented  -->
+  </management>
+  <logging>
+      <log key="auditlog" value="C:\Users\spdev_farm_setup\Documents\WindowsPowerShell\Modules\SharepointPublisher\auditlog.txt" />
+      <log key="errorlog" value="C:\Users\spdev_farm_setup\Documents\WindowsPowerShell\Modules\SharepointPublisher\errorlog.txt" />
+  </logging>
+  <alerts>
+     <alert key="enableAlerts" value="OFF" />
+     <alert key="group" value="MyGroup" />
+     <alert key="title" value="A new file has been added to the library/list ...." />
+     <alert key="alertType" value="List" />
+     <alert key="deliveryChannels" value="Email" />
+     <alert key="eventType" value = "Add" />
+     <alert key="alertFrequency" value= "Immediate" />
+  </alerts>
+  <appSettings>
+      <setting key="monitordirectory" value="C:\Users\spdev_farm_setup\Documents\WindowsPowerShell\Modules\SharepointPublisher\Folder2Monitor" />
+      <setting key="subdirectories" value="$false" />
+      <setting key="action" value="Copy" /> 
+      <setting key="filter" value="^\d{2}-\d{4}-\d{4}.\d{2}.\d{2}-b?\d{3,5}.*\.pdf$" /> <!-- multiple values not implemented  -->
+      <setting key="documentLibrary" value="Documents" />
+      <setting key="documentLibraryURL" value="Documents/TPS Rocks" />
+      <setting key="webURL" value="http://mydev.dev.tps/personal/ront/"/>
+  </appSettings>
+</configurations>
+
+ <!--
+
+** Note Making changes to the configuration file requires that the program be run in order to pick up new settings.
+** Default settings are shown in CAPITALS
+
+<Management>
+
+•	Enable
+
+        Turns the program ON or OFF completely  
+
+•	RunAs account
+
+        this is the account that does the “heavy lifting” on behalf of the users.  Copying or moving files.
+        It must have the necessary access rights to the network drive and to the document library/list
+
+<Logging>
+
+•	Audit log
+
+        The name and path of the file in which all file activity is logged
+        Every occurrence of a file copy/move will be appended to the audit log
+
+•	Error log
+
+        The name and path of the file in which errors are logged
+        Every occurrence of an error will be logged
+
+
+<Alerts>
+
+•	enableAlerts
+        This is code that will set SharePoint alerts for everyone in the specifieded group
+        All users will receive the same settings, so create a new group for this purpose and only include those that want an alert set up for them.
+        Turning this component OFF once alerts have been set up does NOT remove users alerts but will prevent new ones from being created.
+        Users who no longer want to receive alerts will need to turn them off manually.
+        Configures SharePoint alerts on or off
+        Possible values - "On" or "OFF"
+
+
+•	group
+        Configures the group that you wish to set up SharePoint alerts/notifications
+        Members of this group will have a Sharepoint alert set up for the destination library/list
+        Members are free to modify the parameters of their own alerts
+        Possible values - valid AD group
+
+
+•	deliveryChannels
+        Configures the setting that determines how users will be alerted
+        Possible values - EMAIL/SMS
+ 
+ •	alertType
+        Configures the setting that determines what the alert is based on 
+        Possible values - LIST/Item/Custom
+        
+•	eventType
+        Configures SharePoint alerts for a specific type of event
+        Possible values - ADD/Delete/Discussion/All/Modify
+
+ 
+•	alertFrequency
+        Configures how often members of the group will be alerted
+        Possible values - IMMEDIATE/Daily/Monthly
+
+
+  </Alerts>
+
+
+<AppSettings>
+
+•	Monitor Directory
+        The path to the directory that is to be monitored by the program
+
+•	Subdirectories
+        Determines whether subdirectories of the Monitor Directory will also be monitored for file activity
+        Possible values - $true OR $FALSE
+
+•	Action
+        Determines whether files that pass the Filter are removed from the source directory or not (move->deleted; copy ->not deleted)
+        Possible values - move or COPY
+
+•	Filter
+        Determines which particular files are to be copied or moved from the network drive to the SharePoint document library
+        Possible values – any valid regex or wildcard expression  
+        Default is 99-9999-9999.99.99-*.pdf where:
+        99 is 2 digit year of case
+        -
+        9999 is case number
+        -
+        9999 is 4 digit year of case
+        .
+        99 is 2 digit month of case 
+        .
+        99 is 2 digit day of case
+        -
+        * is badge number, followed by any string of characters
+        .
+        pdf  file type
+
+        ** Note - this is NOT the best way of storing files by putting metadata into the name. 
+        Besides, the file naming could be automated and SPsearch should do slice and dice
+
+        ** Note - it currently does not support rejecting any file that contains a string such as WIP, or work in progress.
+        We probably want to implment something that is simpler.Just putting any string "non-numeric" a the start will ensure the file is not copied/moved.
+
+•	WebURL
+        The path to which the document library exists
+
+•	DocumentLibrary
+        The name of the Sharepoint document library
+
+•	DocumentLibraryURL
+        specify your subfolder url here
+
+        
+</AppSettings>
+ -->
+
